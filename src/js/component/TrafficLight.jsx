@@ -33,13 +33,13 @@ const toggleTrafficLight = () =>{
     <div>
         <div id="trafficTop"></div>
         <div id="container">
-            <div className={count!==0 ? 'red light' : 'red light selected'}></div>
-            <div className={count!==1 ? 'yellow light' : 'yellow light selected'}></div>
-            <div className={count!==2 ? 'green light' : 'green light selected'}></div>
+            <div className={`red light ${count===0 ? "selected" : ""}`}></div>
+            <div className={`yellow light ${count===1 ? "selected" : ""}`}></div>
+            <div className={`green light ${count===2 ? "selected" : ""}`}></div>
         </div>
         <div className="text-center m-2">
             <button onClick={toggleTrafficLight} type="button" 
-            className={work ? "btn btn-danger" : "btn btn-success"}
+            className={`btn ${work ? "btn-danger" : "btn-success"}`}
             >
                 {work ? "Stop" : "Start"}
             </button>

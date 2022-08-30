@@ -6,8 +6,6 @@ const TrafficLight = props => {
   const[count,setCount] = useState(max);
   const[work, setWork] = useState(false);
   const[purple, setPurple] = useState(false);
-console.log("max",max);
-console.log("count",count);
 
 const toggleTrafficLight = () =>{
     if(work){
